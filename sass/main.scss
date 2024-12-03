@@ -1,0 +1,206 @@
+@forward "./reset";
+
+// -------------------------------------------------------
+/*
+I decided for this small project not to use anything Sass offers. I also always strive to create comprehensive responsiveness for projects, not just according to the desktop/mobile requirements in the task. In every project, I try to write Sass and showcase various features/techniques. The bigger the project, the more complex I will go.
+*/
+// -------------------------------------------------------
+
+html {
+	@media (max-width: 1300px) {
+		font-size: 50%;
+	}
+
+	@media (max-width: 1040px) {
+		font-size: 45%;
+	}
+
+	@media (max-width: 940px) {
+		font-size: 50%;
+	}
+
+	@media (max-width: 800px) {
+		font-size: 55%;
+	}
+
+	@media (max-width: 465px) {
+		font-size: 45%;
+	}
+}
+
+body {
+	min-height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow-y: auto;
+}
+
+.huddle {
+	max-width: 144rem;
+	width: 100%;
+	height: auto;
+	background: url("../images/bg-desktop.svg") no-repeat;
+	background-color: #684bb1;
+	color: #fff;
+	padding: 5rem;
+
+	font-family: "Open Sans", serif;
+	font-weight: normal;
+
+	&__header {
+		@media (max-width: 800px) {
+			display: flex;
+			justify-content: center;
+		}
+
+		&-logo {
+			width: 20rem;
+			height: 3.2rem;
+		}
+	}
+
+	.huddle__main {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		gap: 7rem;
+		margin-top: 11rem;
+
+		@media (max-width: 940px) {
+			margin-top: 7rem;
+		}
+
+		@media (max-width: 800px) {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		&-img {
+			width: 69.6rem;
+			height: 49.3rem;
+
+			@media (max-width: 940px) {
+				width: 45rem;
+				height: auto;
+			}
+		}
+	}
+
+	&__content {
+		width: 52rem;
+		height: 30.5rem;
+		display: flex;
+		flex-direction: column;
+		gap: 2.4rem;
+		align-self: flex-start;
+		margin-top: 3rem;
+
+		@media (max-width: 940px) {
+			width: 46rem;
+		}
+
+		@media (max-width: 800px) {
+			align-self: auto;
+			align-items: center;
+			margin-bottom: 6rem;
+		}
+
+		&-heading {
+			font: {
+				family: "Poppins", serif;
+				size: 4rem;
+				weight: 600;
+			}
+			line-height: 6rem;
+
+			@media (max-width: 940px) {
+				font-size: 3rem;
+				line-height: 4.5rem;
+			}
+		}
+
+		&-paragraph {
+			font-size: 1.8rem;
+			line-height: 2.7rem;
+		}
+
+		&-btn {
+			width: 20rem;
+			height: 5.6rem;
+			color: #684bb1;
+			background-color: #fff;
+			line-height: 5.6rem;
+			border-radius: 2.8rem;
+			box-shadow: 0.2rem 0.4rem 0.9rem 0.3rem
+				rgba($color: #000000, $alpha: 0.26);
+			cursor: pointer;
+			transition: background-color 0.3s, color 0.3s;
+
+			font: {
+				family: "Poppins", serif;
+				size: 1.8rem;
+				weight: 400;
+			}
+
+			@media (max-width: 940px) {
+				width: 15rem;
+			}
+
+			@media (max-width: 800px) {
+				width: 20rem;
+			}
+
+			&:hover {
+				color: #fff;
+				background-color: #e880e8;
+			}
+		}
+	}
+
+	&__footer {
+		display: flex;
+		justify-content: end;
+		margin-top: 3.5rem;
+
+		@media (max-width: 800px) {
+			justify-content: center;
+		}
+	}
+
+	&__social {
+		width: 15.2rem;
+		display: flex;
+		gap: 1.6rem;
+		margin-right: 2.5rem;
+
+		@media (max-width: 800px) {
+			margin-right: 0;
+		}
+
+		&-link {
+			&:link,
+			&:visited {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				color: #fff;
+				width: 4rem;
+				height: 4rem;
+				border-radius: 50%;
+				border: 0.118rem solid #fff;
+				transition: all 0.3s;
+			}
+
+			&:hover,
+			&:active {
+				color: #ff52c1;
+				border-color: #ff52c1;
+			}
+
+			.fa-brands {
+				font-size: 1.8rem;
+			}
+		}
+	}
+}
