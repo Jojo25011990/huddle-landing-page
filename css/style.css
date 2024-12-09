@@ -123,22 +123,43 @@ body {
   font-family: "Open Sans", serif;
   font-weight: normal;
 }
+.huddle__header {
+  padding-left: 2.5rem;
+}
+@media (max-width: 940px) {
+  .huddle__header {
+    padding-left: 0;
+  }
+}
 @media (max-width: 800px) {
   .huddle__header {
     display: flex;
     justify-content: center;
+    padding-left: 0;
   }
 }
-.huddle__header-logo {
-  width: 20rem;
-  height: 3.2rem;
+@media (max-width: 450px) {
+  .huddle__header {
+    padding-left: 0;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 940px) {
+  .huddle__header-logo {
+    max-width: 23rem;
+  }
+}
+@media (max-width: 800px) {
+  .huddle__header-logo {
+    max-width: 20rem;
+  }
 }
 .huddle .huddle__main {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 7rem;
-  margin-top: 11rem;
+  margin-top: 10rem;
 }
 @media (max-width: 940px) {
   .huddle .huddle__main {
